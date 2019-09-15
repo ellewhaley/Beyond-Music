@@ -1,0 +1,48 @@
+@import './variables';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+  line-height: 62.5%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  overflow: auto;
+}
+
+p,
+pre,
+blockquote,
+a,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+body:not(.user-is-tabbing) {
+  button,
+  select,
+  textarea {
+    &:focus {
+      outline: none;
+    }
+  }
+}
