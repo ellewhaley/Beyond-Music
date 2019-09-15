@@ -1,0 +1,11 @@
+@import '../styles/variables';
+
+.header {
+  background-image: url('../../assets/header_bg.png');
+  background-repeat: repeat-x;
+
+  &__logo {
+    width: 230px;
+    padding: 20px 20px 0;
+  }
+}
