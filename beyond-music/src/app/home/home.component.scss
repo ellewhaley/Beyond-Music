@@ -1,5 +1,13 @@
 @import '../styles/variables';
 
-* {
+.main {
+  background-image: url('../../assets/main_bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 200vh;
+  margin-top: -12px;
 
+  @media($break-tablet-landscape) {
+    margin-top: -18px;
+  }
 }
