@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  videos = [];
 
-  constructor() { }
+  constructor(private dataService: DataService) {}
 
   ngOnInit() {
+    this.dataService.sendGetRequest().subscribe((data: any) => {
+      console.log(data);
+      this.videos = data.items;
+    });
   }
-
 }

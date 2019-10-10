@@ -1,7 +1,19 @@
 <div class="main">
   <div class="grid">
-    <div class="video">
-
+    <div *ngFor="let video of videos" class="video">
+      <div class="grid__container">
+        <img
+          src="{{ video.snippet.thumbnails.high.url }}"
+          alt="{{ video.snippet.title }}"
+          class="grid__container-img"
+        />
+        <img
+          src="./assets/play_button.svg"
+          alt="play music symbol"
+          class="grid__container-play"
+        />
+        <h1 class="grid__container-title">{{ video.snippet.title }}</h1>
+      </div>
     </div>
   </div>
 </div>
