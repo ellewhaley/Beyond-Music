@@ -7,20 +7,18 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { PlayComponent } from './play/play.component';
 import { HeaderComponent } from './header/header.component';
+import { ReadMoreComponent } from './readmore.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     PlayComponent,
-    HeaderComponent
+    HeaderComponent,
+    ReadMoreComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

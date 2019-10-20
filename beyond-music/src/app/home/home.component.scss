@@ -1,6 +1,7 @@
 @import '../styles/variables';
 
 * {
+  font-family: 'Roboto';
   color: $color-light-grey;
 }
 
@@ -24,21 +25,45 @@
     &__container {
       position: relative;
       padding-top: 30px;
-      width: 270px;
+      width: 285px;
+
+      &-play {
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        padding: 10px 10px;
+        bottom: 0;
+        width: 100%;
+      }
 
       &-img {
-        // position: absolute;
         width: inherit;
       }
 
       &-title {
-        position: absolute;
+        align-self: center;
+        color: $color-green;
+        font-family: 'AlfaSlabOne';
+        font-size: 1.6rem;
+        font-weight: 100;
+        line-height: 1.8rem;
       }
+      
+      &-button {
+        width: 30px;
+      }
+    }
 
-      &-play {
-        position: absolute;
-        left: 0;
-        bottom: 0;
+    &__description {
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+      padding-top: 10px;
+      width: 285px;
+
+      &-text {
+        color: $color-grey;
+        padding-top: 5px;
       }
     }
   }

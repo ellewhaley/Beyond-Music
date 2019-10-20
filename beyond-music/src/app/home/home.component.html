@@ -7,12 +7,22 @@
           alt="{{ video.snippet.title }}"
           class="grid__container-img"
         />
-        <img
-          src="./assets/play_button.svg"
-          alt="play music symbol"
-          class="grid__container-play"
-        />
-        <h1 class="grid__container-title">{{ video.snippet.title }}</h1>
+        <div class="grid__container-play">
+          <h1 class="grid__container-title">{{ video.snippet.title }}</h1>
+          <button routerLink="/play">
+            <img
+              src="./assets/play_button.svg"
+              alt="play music symbol"
+              class="grid__container-button"
+            />
+          </button>
+        </div>
+      </div>
+      <div class="grid__description">
+        <p class="grid__description-date">
+          <b>Published on {{ video.snippet.publishedAt | date: "medium" }}</b>
+        </p>
+        <p class="grid__description-text">{{ video.snippet.description }}</p>
       </div>
     </div>
   </div>
