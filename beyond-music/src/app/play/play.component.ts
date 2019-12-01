@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-play',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./play.component.scss']
 })
 export class PlayComponent implements OnInit {
+  video = {};
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    this.dataService.sendGetRequest().subscribe((data: any) => {
+      console.log(data);
+      this.video = data.items[0];
+    });
   }
-
 }

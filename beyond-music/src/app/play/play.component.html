@@ -1,3 +1,18 @@
 <div class="main">
-  <p>play works!</p>
+  <div class="video">
+    <div class="video__snippet">
+      <img
+        src="{{ video.snippet.thumbnails.high.url }}"
+        alt="{{ video.snippet.title }}"
+        class="video__snippet-img"
+      />
+    </div>
+    <div class="video__description">
+      <h1 class="video__description-title">{{ video.snippet.title }}</h1>
+      <p class="video__description-date">
+        <b>Published on {{ video.snippet.publishedAt | date: "medium" }}</b>
+      </p>
+      <p class="video__description-text">{{ video.snippet.description }}</p>
+    </div>
+  </div>
 </div>

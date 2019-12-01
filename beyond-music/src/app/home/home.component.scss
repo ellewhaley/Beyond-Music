@@ -9,7 +9,7 @@
   background-image: url('../../assets/main_bg.png');
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 200vh;
+  min-height: 100vh;
   margin-top: -12px;
 
   @media($break-tablet-landscape) {
@@ -21,11 +21,40 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    max-width: 320px;
+    margin: 0 auto;
+
+    @media($break-tablet-portrait) {
+      max-width: 768px;
+    }
+
+    @media($break-tablet-landscape) {
+      padding-top: 40px;
+      max-width: 1024px;
+    }
+
+    @media($break-desktop) {
+      max-width: 1440px;
+    }
 
     &__container {
       position: relative;
       padding-top: 30px;
       width: 285px;
+
+      @media($break-tablet-portrait) {
+        margin: 0 30px;
+      }
+
+      @media($break-tablet-landscape) {
+        width: 280px;
+        margin: 30 30px;
+      }
+
+      @media($break-desktop) {
+        width: 350px;
+        margin: 30 50px;
+      }
 
       &-play {
         background-color: rgba(0, 0, 0, 0.5);
@@ -34,7 +63,7 @@
         position: absolute;
         padding: 10px 10px;
         bottom: 0;
-        width: 100%;
+        width: 100%;     
       }
 
       &-img {
@@ -60,6 +89,20 @@
       line-height: 1.6rem;
       padding-top: 10px;
       width: 285px;
+
+      @media($break-tablet-portrait) {
+        margin: 0 30px;
+      }
+
+      @media($break-tablet-landscape) {
+        width: 280px;
+        margin: 10px 30px;
+      }
+
+      @media($break-desktop) {
+        width: 350px;
+        margin: 30 50px;
+      }
 
       &-text {
         color: $color-grey;
